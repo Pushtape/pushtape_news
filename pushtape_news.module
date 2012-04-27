@@ -1,7 +1,8 @@
 <?php
+
 /**
  * @file
- * Code for the Open Academy News feature.
+ * Code for the Pushtape News feature.
  */
 
 include_once('pushtape_news.features.inc');
@@ -26,7 +27,7 @@ function pushtape_news_apps_app_info() {
 
 
 /** 
- * Open Academy News App Configuration Form
+ * Pushtape News App Configuration Form
  *
  * This form will be blank until we have specific settings to customize beyond
  * the demo content that the apps.module puts here for us. 

@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * openacademy_news.views_default.inc
+ * pushtape_news.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function openacademy_news_views_default_views() {
+function pushtape_news_views_default_views() {
   $export = array();
 
   $view = new view;
-  $view->name = 'openacademy_news';
+  $view->name = 'pushtape_news';
   $view->description = 'Administrative view to show news.';
   $view->tag = 'default';
   $view->base_table = 'node';
@@ -113,7 +113,7 @@ function openacademy_news_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'openacademy_news' => 'openacademy_news',
+    'pushtape_news' => 'pushtape_news',
   );
 
   /* Display: Sidebar of News Items */
@@ -461,7 +461,7 @@ function openacademy_news_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'openacademy_news' => 'openacademy_news',
+    'pushtape_news' => 'pushtape_news',
   );
   /* Filter criterion: Featured News Item */
   $handler->display->display_options['filters']['title']['id'] = 'title';
@@ -548,7 +548,7 @@ function openacademy_news_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'openacademy_news' => 'openacademy_news',
+    'pushtape_news' => 'pushtape_news',
   );
   $handler->display->display_options['pane_title'] = 'Slideshow of News Items';
   $handler->display->display_options['pane_category']['name'] = 'News';
@@ -581,7 +581,7 @@ function openacademy_news_views_default_views() {
     'news_slideshow' => 0,
   );
   $handler->display->display_options['sitename_title'] = 1;
-  $export['openacademy_news'] = $view;
+  $export['pushtape_news'] = $view;
 
   return $export;
 }

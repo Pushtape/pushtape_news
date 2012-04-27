@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * openacademy_news.pages_default.inc
+ * pushtape_news.pages_default.inc
  */
 
 /**
  * Implements hook_default_page_manager_pages().
  */
-function openacademy_news_default_page_manager_pages() {
+function pushtape_news_default_page_manager_pages() {
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
-  $page->name = 'openacademy_news';
+  $page->name = 'pushtape_news';
   $page->task = 'page';
   $page->admin_title = 'News';
   $page->admin_description = '';
@@ -51,9 +51,9 @@ function openacademy_news_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_openacademy_news_panel_context';
+  $handler->name = 'page_pushtape_news_panel_context';
   $handler->task = 'page';
-  $handler->subtask = 'openacademy_news';
+  $handler->subtask = 'pushtape_news';
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
@@ -89,7 +89,7 @@ function openacademy_news_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
-    $pane->subtype = 'openacademy_news-all_news';
+    $pane->subtype = 'pushtape_news-all_news';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -121,7 +121,7 @@ function openacademy_news_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'header';
     $pane->type = 'views_panes';
-    $pane->subtype = 'openacademy_news-featured_news';
+    $pane->subtype = 'pushtape_news-featured_news';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -149,7 +149,7 @@ function openacademy_news_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
-    $pane->subtype = 'openacademy_events-upcoming_events';
+    $pane->subtype = 'pushtape_events-upcoming_events';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -177,7 +177,7 @@ function openacademy_news_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
-    $pane->subtype = 'openacademy_publications-publication_listing';
+    $pane->subtype = 'pushtape_publications-publication_listing';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -204,7 +204,7 @@ function openacademy_news_default_page_manager_pages() {
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages['openacademy_news'] = $page;
+  $pages['pushtape_news'] = $page;
 
   return $pages;
 

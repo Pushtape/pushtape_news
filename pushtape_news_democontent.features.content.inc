@@ -1,27 +1,27 @@
 <?php
 /**
  * @file
- * openacademy_news_democontent.features.content.inc
+ * pushtape_news_democontent.features.content.inc
  */
 
 /**
  * Implements hook_content_defaults().
  */
-function openacademy_news_democontent_content_defaults() {
+function pushtape_news_democontent_content_defaults() {
   $content = array();
 
-  $content['openacademy-news-defaultcontent-1'] = (object) array(
+  $content['pushtape-news-defaultcontent-1'] = (object) array(
     'exported_path' => 'news/historical-documents-display',
     'title' => 'Historical Documents on Display',
     'status' => '1',
     'promote' => '1',
     'sticky' => '0',
-    'type' => 'openacademy_news',
+    'type' => 'pushtape_news',
     'language' => 'und',
     'created' => '1328136360',
     'comment' => '0',
     'translate' => '0',
-    'machine_name' => 'openacademy-news-defaultcontent-1',
+    'machine_name' => 'pushtape-news-defaultcontent-1',
     'body' => array(
       'und' => array(
         0 => array(
@@ -58,18 +58,18 @@ function openacademy_news_democontent_content_defaults() {
     ),
   );
 
-  $content['openacademy-news-defaultcontent-2'] = (object) array(
+  $content['pushtape-news-defaultcontent-2'] = (object) array(
     'exported_path' => 'news/research-tips',
     'title' => 'Research Tips',
     'status' => '1',
     'promote' => '1',
     'sticky' => '0',
-    'type' => 'openacademy_news',
+    'type' => 'pushtape_news',
     'language' => 'und',
     'created' => '1328741280',
     'comment' => '0',
     'translate' => '0',
-    'machine_name' => 'openacademy-news-defaultcontent-2',
+    'machine_name' => 'pushtape-news-defaultcontent-2',
     'body' => array(
       'und' => array(
         0 => array(
@@ -107,18 +107,18 @@ function openacademy_news_democontent_content_defaults() {
     ),
   );
 
-  $content['openacademy-news-defaultcontent-3'] = (object) array(
+  $content['pushtape-news-defaultcontent-3'] = (object) array(
     'exported_path' => 'news/yearly-funding-announcement',
     'title' => 'Yearly Funding Announcement',
     'status' => '1',
     'promote' => '1',
     'sticky' => '0',
-    'type' => 'openacademy_news',
+    'type' => 'pushtape_news',
     'language' => 'und',
     'created' => '1325803920',
     'comment' => '0',
     'translate' => '0',
-    'machine_name' => 'openacademy-news-defaultcontent-3',
+    'machine_name' => 'pushtape-news-defaultcontent-3',
     'body' => array(
       'und' => array(
         0 => array(
@@ -156,18 +156,18 @@ function openacademy_news_democontent_content_defaults() {
     ),
   );
 
-  $content['openacademy-news-defaultcontent-4'] = (object) array(
+  $content['pushtape-news-defaultcontent-4'] = (object) array(
     'exported_path' => 'news/extended-stacks-access',
     'title' => 'Extended Stacks Access',
     'status' => '1',
     'promote' => '1',
     'sticky' => '0',
-    'type' => 'openacademy_news',
+    'type' => 'pushtape_news',
     'language' => 'und',
     'created' => '1323903180',
     'comment' => '0',
     'translate' => '0',
-    'machine_name' => 'openacademy-news-defaultcontent-4',
+    'machine_name' => 'pushtape-news-defaultcontent-4',
     'body' => array(
       'und' => array(
         0 => array(
@@ -205,18 +205,18 @@ function openacademy_news_democontent_content_defaults() {
     ),
   );
 
-  $content['openacademy-news-defaultcontent-5'] = (object) array(
+  $content['pushtape-news-defaultcontent-5'] = (object) array(
     'exported_path' => 'news/leek-mooli-kuka-shallot-chard-manioc',
     'title' => 'Professor Featured in Newspaper',
     'status' => '1',
     'promote' => '1',
     'sticky' => '0',
-    'type' => 'openacademy_news',
+    'type' => 'pushtape_news',
     'language' => 'und',
     'created' => '1329000840',
     'comment' => '0',
     'translate' => '0',
-    'machine_name' => 'openacademy-news-defaultcontent-5',
+    'machine_name' => 'pushtape-news-defaultcontent-5',
     'body' => array(
       'und' => array(
         0 => array(
@@ -254,18 +254,18 @@ function openacademy_news_democontent_content_defaults() {
     ),
   );
 
-  $content['openacademy-news-defaultcontent-6'] = (object) array(
+  $content['pushtape-news-defaultcontent-6'] = (object) array(
     'exported_path' => 'news/book-award',
     'title' => 'Professor Wins Book Award',
     'status' => '1',
     'promote' => '1',
     'sticky' => '0',
-    'type' => 'openacademy_news',
+    'type' => 'pushtape_news',
     'language' => 'und',
     'created' => '1328655300',
     'comment' => '0',
     'translate' => '0',
-    'machine_name' => 'openacademy-news-defaultcontent-6',
+    'machine_name' => 'pushtape-news-defaultcontent-6',
     'body' => array(
       'und' => array(
         0 => array(

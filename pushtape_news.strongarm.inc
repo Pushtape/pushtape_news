@@ -1,104 +1,104 @@
 <?php
 /**
  * @file
- * openacademy_news.strongarm.inc
+ * pushtape_news.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function openacademy_news_strongarm() {
+function pushtape_news_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_openacademy_news';
+  $strongarm->name = 'additional_settings__active_tab_pushtape_news';
   $strongarm->value = 'edit-display';
-  $export['additional_settings__active_tab_openacademy_news'] = $strongarm;
+  $export['additional_settings__active_tab_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_popup_authored_enabled_openacademy_news';
+  $strongarm->name = 'date_popup_authored_enabled_pushtape_news';
   $strongarm->value = 1;
-  $export['date_popup_authored_enabled_openacademy_news'] = $strongarm;
+  $export['date_popup_authored_enabled_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_popup_authored_format_openacademy_news';
+  $strongarm->name = 'date_popup_authored_format_pushtape_news';
   $strongarm->value = 'm/d/Y - g:ia';
-  $export['date_popup_authored_format_openacademy_news'] = $strongarm;
+  $export['date_popup_authored_format_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_popup_authored_year_range_openacademy_news';
+  $strongarm->name = 'date_popup_authored_year_range_pushtape_news';
   $strongarm->value = '3';
-  $export['date_popup_authored_year_range_openacademy_news'] = $strongarm;
+  $export['date_popup_authored_year_range_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_openacademy_news';
+  $strongarm->name = 'menu_options_pushtape_news';
   $strongarm->value = array();
-  $export['menu_options_openacademy_news'] = $strongarm;
+  $export['menu_options_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_openacademy_news';
+  $strongarm->name = 'menu_parent_pushtape_news';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_openacademy_news'] = $strongarm;
+  $export['menu_parent_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_openacademy_news';
+  $strongarm->name = 'node_options_pushtape_news';
   $strongarm->value = array(
     0 => 'status',
     1 => 'promote',
     2 => 'revision',
   );
-  $export['node_options_openacademy_news'] = $strongarm;
+  $export['node_options_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_openacademy_news';
+  $strongarm->name = 'node_preview_pushtape_news';
   $strongarm->value = '0';
-  $export['node_preview_openacademy_news'] = $strongarm;
+  $export['node_preview_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_openacademy_news';
+  $strongarm->name = 'node_submitted_pushtape_news';
   $strongarm->value = 1;
-  $export['node_submitted_openacademy_news'] = $strongarm;
+  $export['node_submitted_pushtape_news'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_defaults_node_openacademy_news';
+  $strongarm->name = 'panelizer_defaults_node_pushtape_news';
   $strongarm->value = array(
     'status' => 1,
     'default' => 1,
     'choice' => 0,
   );
-  $export['panelizer_defaults_node_openacademy_news'] = $strongarm;
+  $export['panelizer_defaults_node_pushtape_news'] = $strongarm;
   
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:openacademy_news_allowed_layouts';
-  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:38:"panelizer_node:openacademy_publication";s:23:"allowed_layout_settings";a:35:{s:8:"flexible";b:0;s:14:"twocol_stacked";b:0;s:13:"twocol_bricks";b:0;s:6:"twocol";b:0;s:25:"threecol_33_34_33_stacked";b:0;s:17:"threecol_33_34_33";b:0;s:25:"threecol_25_50_25_stacked";b:0;s:17:"threecol_25_50_25";b:0;s:6:"onecol";b:0;s:6:"whelan";b:1;s:12:"webb_flipped";b:1;s:5:"sutro";b:1;s:13:"selby_flipped";b:1;s:5:"selby";b:1;s:17:"sanderson_flipped";b:1;s:9:"sanderson";b:1;s:4:"pond";b:1;s:6:"phelan";b:1;s:15:"moscone_flipped";b:1;s:7:"moscone";b:1;s:8:"mccoppin";b:1;s:15:"hewston_flipped";b:1;s:7:"hewston";b:1;s:6:"harris";b:1;s:5:"geary";b:1;s:12:"burr_flipped";b:1;s:4:"burr";b:1;s:22:"bryant_flipped_flipped";b:1;s:6:"bryant";b:1;s:5:"brown";b:1;s:15:"brenham_flipped";b:1;s:7:"brenham";b:1;s:6:"boxton";b:1;s:16:"bartlett_flipped";b:1;s:8:"bartlett";b:1;}s:10:"form_state";N;}';
-  $export['panelizer_node:openacademy_news_allowed_layouts'] = $strongarm;
+  $strongarm->name = 'panelizer_node:pushtape_news_allowed_layouts';
+  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:38:"panelizer_node:pushtape_publication";s:23:"allowed_layout_settings";a:35:{s:8:"flexible";b:0;s:14:"twocol_stacked";b:0;s:13:"twocol_bricks";b:0;s:6:"twocol";b:0;s:25:"threecol_33_34_33_stacked";b:0;s:17:"threecol_33_34_33";b:0;s:25:"threecol_25_50_25_stacked";b:0;s:17:"threecol_25_50_25";b:0;s:6:"onecol";b:0;s:6:"whelan";b:1;s:12:"webb_flipped";b:1;s:5:"sutro";b:1;s:13:"selby_flipped";b:1;s:5:"selby";b:1;s:17:"sanderson_flipped";b:1;s:9:"sanderson";b:1;s:4:"pond";b:1;s:6:"phelan";b:1;s:15:"moscone_flipped";b:1;s:7:"moscone";b:1;s:8:"mccoppin";b:1;s:15:"hewston_flipped";b:1;s:7:"hewston";b:1;s:6:"harris";b:1;s:5:"geary";b:1;s:12:"burr_flipped";b:1;s:4:"burr";b:1;s:22:"bryant_flipped_flipped";b:1;s:6:"bryant";b:1;s:5:"brown";b:1;s:15:"brenham_flipped";b:1;s:7:"brenham";b:1;s:6:"boxton";b:1;s:16:"bartlett_flipped";b:1;s:8:"bartlett";b:1;}s:10:"form_state";N;}';
+  $export['panelizer_node:pushtape_news_allowed_layouts'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:openacademy_news_allowed_types';
+  $strongarm->name = 'panelizer_node:pushtape_news_allowed_types';
   $strongarm->value = array(
     'entity_field-fieldable_panels_pane:field_quick_links_links' => 'entity_field-fieldable_panels_pane:field_quick_links_links',
     'entity_field-fieldable_panels_pane:field_basic_file_file' => 'entity_field-fieldable_panels_pane:field_basic_file_file',
@@ -145,7 +145,7 @@ function openacademy_news_strongarm() {
     'entity_field_extra-taxonomy_term:description' => 'entity_field_extra-taxonomy_term:description',
     'entity_field_extra-user:summary' => 'entity_field_extra-user:summary',
     'custom-custom' => 0,
-    'block-apps-manage_apps__openacademy' => 0,
+    'block-apps-manage_apps__pushtape' => 0,
     'block-calendar-calendar_legend' => 0,
     'block-menu-devel' => 0,
     'block-menu-menu-footer-menu' => 0,
@@ -188,26 +188,26 @@ function openacademy_news_strongarm() {
     'menu_tree-management' => 0,
     'menu_tree-navigation' => 0,
     'menu_tree-user-menu' => 0,
-    'views_panes-openacademy_courses-course_listing' => 'views_panes-openacademy_courses-course_listing',
-    'views_panes-openacademy_courses-courses_table' => 'views_panes-openacademy_courses-courses_table',
-    'views_panes-openacademy_courses-featured_course' => 'views_panes-openacademy_courses-featured_course',
-    'views_panes-openacademy_courses-course_slideshow' => 'views_panes-openacademy_courses-course_slideshow',
-    'views_panes-openacademy_events-upcoming_events' => 'views_panes-openacademy_events-upcoming_events',
-    'views_panes-openacademy_events-monthly_calendar' => 'views_panes-openacademy_events-monthly_calendar',
-    'views_panes-openacademy_events-monthly_mini_calendar' => 'views_panes-openacademy_events-monthly_mini_calendar',
-    'views_panes-openacademy_events-all_events' => 'views_panes-openacademy_events-all_events',
-    'views_panes-openacademy_news-news_listing' => 'views_panes-openacademy_news-news_listing',
-    'views_panes-openacademy_news-all_news' => 'views_panes-openacademy_news-all_news',
-    'views_panes-openacademy_news-featured_news' => 'views_panes-openacademy_news-featured_news',
-    'views_panes-openacademy_news-news_slideshow' => 'views_panes-openacademy_news-news_slideshow',
-    'views_panes-openacademy_people-people_table' => 'views_panes-openacademy_people-people_table',
-    'views_panes-openacademy_people-people_grid' => 'views_panes-openacademy_people-people_grid',
-    'views_panes-openacademy_people-featured_person' => 'views_panes-openacademy_people-featured_person',
-    'views_panes-openacademy_people-person_slideshow' => 'views_panes-openacademy_people-person_slideshow',
-    'views_panes-openacademy_people-people_summary' => 'views_panes-openacademy_people-people_summary',
-    'views_panes-openacademy_publications-publication_listing' => 'views_panes-openacademy_publications-publication_listing',
-    'views_panes-openacademy_publications-publication_all' => 'views_panes-openacademy_publications-publication_all',
-    'views_panes-openacademy_publications-featured_publication' => 'views_panes-openacademy_publications-featured_publication',
+    'views_panes-pushtape_courses-course_listing' => 'views_panes-pushtape_courses-course_listing',
+    'views_panes-pushtape_courses-courses_table' => 'views_panes-pushtape_courses-courses_table',
+    'views_panes-pushtape_courses-featured_course' => 'views_panes-pushtape_courses-featured_course',
+    'views_panes-pushtape_courses-course_slideshow' => 'views_panes-pushtape_courses-course_slideshow',
+    'views_panes-pushtape_events-upcoming_events' => 'views_panes-pushtape_events-upcoming_events',
+    'views_panes-pushtape_events-monthly_calendar' => 'views_panes-pushtape_events-monthly_calendar',
+    'views_panes-pushtape_events-monthly_mini_calendar' => 'views_panes-pushtape_events-monthly_mini_calendar',
+    'views_panes-pushtape_events-all_events' => 'views_panes-pushtape_events-all_events',
+    'views_panes-pushtape_news-news_listing' => 'views_panes-pushtape_news-news_listing',
+    'views_panes-pushtape_news-all_news' => 'views_panes-pushtape_news-all_news',
+    'views_panes-pushtape_news-featured_news' => 'views_panes-pushtape_news-featured_news',
+    'views_panes-pushtape_news-news_slideshow' => 'views_panes-pushtape_news-news_slideshow',
+    'views_panes-pushtape_people-people_table' => 'views_panes-pushtape_people-people_table',
+    'views_panes-pushtape_people-people_grid' => 'views_panes-pushtape_people-people_grid',
+    'views_panes-pushtape_people-featured_person' => 'views_panes-pushtape_people-featured_person',
+    'views_panes-pushtape_people-person_slideshow' => 'views_panes-pushtape_people-person_slideshow',
+    'views_panes-pushtape_people-people_summary' => 'views_panes-pushtape_people-people_summary',
+    'views_panes-pushtape_publications-publication_listing' => 'views_panes-pushtape_publications-publication_listing',
+    'views_panes-pushtape_publications-publication_all' => 'views_panes-pushtape_publications-publication_all',
+    'views_panes-pushtape_publications-featured_publication' => 'views_panes-pushtape_publications-featured_publication',
     'views_panes-panopoly_admin_content-admin_content' => 0,
     'views_panes-panopoly_admin_content-recent_content_collage' => 0,
     'views_panes-panopoly_admin_media-admin_media' => 0,
@@ -273,12 +273,12 @@ function openacademy_news_strongarm() {
     'theme-theme' => 0,
     'users-users' => 0,
   );
-  $export['panelizer_node:openacademy_news_allowed_types'] = $strongarm;
+  $export['panelizer_node:pushtape_news_allowed_types'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'panelizer_node:openacademy_news_default';
+  $strongarm->name = 'panelizer_node:pushtape_news_default';
   $strongarm->value = array(
     'token' => 0,
     'entity_form_field' => 0,
@@ -291,14 +291,14 @@ function openacademy_news_strongarm() {
     'views_panes' => 'views_panes',
     'other' => 'other',
   );
-  $export['panelizer_node:openacademy_news_default'] = $strongarm;
+  $export['panelizer_node:pushtape_news_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_node_openacademy_news_pattern';
+  $strongarm->name = 'pathauto_node_pushtape_news_pattern';
   $strongarm->value = 'news/[node:title]';
-  $export['pathauto_node_openacademy_news_pattern'] = $strongarm;
+  $export['pathauto_node_pushtape_news_pattern'] = $strongarm;
 
   return $export;
 }

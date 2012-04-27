@@ -1,22 +1,22 @@
 <?php
 /**
  * @file
- * openacademy_news.panelizer.inc
+ * pushtape_news.panelizer.inc
  */
 
 /**
  * Implements hook_panelizer_defaults().
  */
-function openacademy_news_panelizer_defaults() {
+function pushtape_news_panelizer_defaults() {
   $export = array();
 
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:openacademy_news:default';
+  $panelizer->name = 'node:pushtape_news:default';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
-  $panelizer->panelizer_key = 'openacademy_news';
+  $panelizer->panelizer_key = 'pushtape_news';
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = 'news-page';
   $panelizer->css = '';
@@ -120,7 +120,7 @@ function openacademy_news_panelizer_defaults() {
     $pane->pid = 'new-7';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
-    $pane->subtype = 'openacademy_news-news_listing';
+    $pane->subtype = 'pushtape_news-news_listing';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -147,7 +147,7 @@ function openacademy_news_panelizer_defaults() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $panelizer->display = $display;
-  $export['node:openacademy_news:default'] = $panelizer;
+  $export['node:pushtape_news:default'] = $panelizer;
 
   return $export;
 }

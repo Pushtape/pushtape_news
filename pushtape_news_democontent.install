@@ -3,7 +3,7 @@
 /**
  * Callback to get default taxonomy terms
  */
-function openacademy_news_democontent_get_terms() {
+function pushtape_news_democontent_get_terms() {
   return array(
     'Campus Life' => '34d5b8ca-fd06-4d61-8ecf-4833fb238af9',
     'Academics' => '5562899e-9b8c-408b-b203-a242da774fbc',
@@ -14,13 +14,13 @@ function openacademy_news_democontent_get_terms() {
 /**
  * Implementation of hook_init()
  */
-function openacademy_news_democontent_init() {
+function pushtape_news_democontent_init() {
 
   // Install the taxonomy terms after features has already been installed.
-  if (!variable_get('openacademy_news_democontent_installed', FALSE) && $vocab = taxonomy_vocabulary_machine_name_load('openacademy_academic_term')) {
+  if (!variable_get('pushtape_news_democontent_installed', FALSE) && $vocab = taxonomy_vocabulary_machine_name_load('pushtape_academic_term')) {
 
     // Add default taxonomy terms
-    $tags = openacademy_news_democontent_get_terms();
+    $tags = pushtape_news_democontent_get_terms();
     foreach($tags as $tag => $tag_uuid) {
 
       // Add the term 
@@ -28,11 +28,11 @@ function openacademy_news_democontent_init() {
       $term->vid = $vocab->vid;
       $term->uuid = $tag_uuid;
       $term->name = $tag;
-      $term->vocabulary_machine_name = 'openacademy_tags';
+      $term->vocabulary_machine_name = 'pushtape_tags';
       taxonomy_term_save($term);
 
       // Randomly assign it to a few nodes
-      foreach(db_query('SELECT n.nid FROM {node} n WHERE n.type = :type ORDER BY RAND() LIMIT 4', array(':type' => 'openacademy_news')) as $node) {
+      foreach(db_query('SELECT n.nid FROM {node} n WHERE n.type = :type ORDER BY RAND() LIMIT 4', array(':type' => 'pushtape_news')) as $node) {
         $node = node_load($node->nid, NULL, TRUE);
         $node->field_tags['und'][] = array('tid' => $term->tid);
         node_save($node);
@@ -40,17 +40,17 @@ function openacademy_news_democontent_init() {
     }
 
     // Set installed bit to prevent this from running again
-    variable_set('openacademy_news_democontent_installed', TRUE);
+    variable_set('pushtape_news_democontent_installed', TRUE);
   }
 }
 
 /**
  * Implementation of hook_disable()
  */
-function openacademy_news_democontent_disable() {
+function pushtape_news_democontent_disable() {
 
   // Delete existing terms
-  $tags = openacademy_news_democontent_get_terms();
+  $tags = pushtape_news_democontent_get_terms();
   foreach($tags as $tag) {
     foreach (taxonomy_get_term_by_name($tag) as $term) {
       if (isset($term->tid)) {
@@ -60,5 +60,5 @@ function openacademy_news_democontent_disable() {
   }
 
    // Set installed option
-  variable_set('openacademy_news_democontent_installed', FALSE);
+  variable_set('pushtape_news_democontent_installed', FALSE);
 }

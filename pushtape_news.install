@@ -3,16 +3,16 @@
 /** 
  * Implementation of hook_install()
  */
-function openacademy_news_install() {
+function pushtape_news_install() {
 }
 
 /**
  * Implementation of hook_init()
  */
-function openacademy_news_init() {
+function pushtape_news_init() {
 
   // Install the taxonomy terms after features has already been installed. Pattern from Open Enterprise. 
-  if (!variable_get('openacademy_news_installed', FALSE)) {
+  if (!variable_get('pushtape_news_installed', FALSE)) {
 
     $display = new panels_display();
     $display->layout = 'phelan';
@@ -149,19 +149,19 @@ function openacademy_news_init() {
 
     // Save the display and save the DID for later use
     panels_save_display($display);
-    variable_set('openacademy_news_ds_featured', $display->did);
+    variable_set('pushtape_news_ds_featured', $display->did);
     drupal_flush_all_caches();
 
     // Set installed bit to prevent this from running again
-    variable_set('openacademy_news_installed', TRUE);
+    variable_set('pushtape_news_installed', TRUE);
   }
 }
 
 /**
  * Implementation of hook_uninstall()
  */
-function openacademy_news_uninstall() {
+function pushtape_news_uninstall() {
 
   // Set installed option
-  variable_set('openacademy_news_installed', FALSE);
+  variable_set('pushtape_news_installed', FALSE);
 }

@@ -221,7 +221,7 @@ function pushtape_news_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           0 => array(
-            'vocabulary' => 'openacademy_tags',
+            'vocabulary' => 'pushtape_tags',
             'parent' => '0',
           ),
         ),
