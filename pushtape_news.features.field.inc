@@ -66,6 +66,12 @@ function pushtape_news_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'mediaplaylist' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'text',
@@ -158,6 +164,12 @@ function pushtape_news_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'mediaplaylist' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'hidden',
           'module' => 'image',
@@ -175,6 +187,7 @@ function pushtape_news_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
+        'default_image' => 0,
         'file_directory' => 'featured',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
@@ -249,6 +262,12 @@ function pushtape_news_field_default_fields() {
           'weight' => '2',
         ),
         'grid' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'mediaplaylist' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',

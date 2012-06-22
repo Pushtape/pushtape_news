@@ -33,7 +33,7 @@ function pushtape_news_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'News',
+    'title' => 'news',
     'name' => 'main-menu',
     'weight' => '0',
     'parent' => array(
@@ -126,7 +126,7 @@ function pushtape_news_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'exposed' => array(
-        'title' => 'Historical Documents on Display',
+        'title' => 'Tour begins next week',
         'widget_title' => '',
       ),
       'override_title' => 0,
@@ -149,57 +149,29 @@ function pushtape_news_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
-    $pane->subtype = 'pushtape_events-upcoming_events';
+    $pane->subtype = 'pushtape_news-news_listing';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '3',
+      'items_per_page' => '10',
       'fields_override' => array(
-        'field_featured_image' => 1,
-        'field_event_date' => 1,
+        'field_featured_image' => 0,
         'title' => 1,
-        'body' => 1,
+        'created' => 0,
+        'body' => 0,
+        'field_tags' => 0,
       ),
       'view_mode' => NULL,
-      'widget_title' => 'Upcoming Events',
+      'widget_title' => 'Older',
     );
     $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
+    $pane->style = array();
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['sidebar'][0] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'sidebar';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'pushtape_publications-publication_listing';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '3',
-      'fields_override' => array(
-        'field_featured_image' => 1,
-        'title' => 1,
-        'body' => 1,
-      ),
-      'view_mode' => NULL,
-      'widget_title' => 'Recent Publications',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][1] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
