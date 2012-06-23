@@ -37,16 +37,3 @@ function pushtape_news_configure_form($form, &$form_state) {
 
    return $form;
 }
-
-/**
- * Implementation hook_panelizer_default_types_alter()
- */
-function pushtape_news_panelizer_defaults_alter(&$defaults) {
-  // Require the panels panelizer include from features since 
-  // features doesn't support hook_panelizer_defaults() correctly.
-  // See https://drupal.org/node/1427150 for more on that.
-  require_once('pushtape_news.panelizer.inc');
-  foreach(pushtape_news_panelizer_defaults() as $name => $default) {
-    $defaults[$name] = $default;
-  }
-}
