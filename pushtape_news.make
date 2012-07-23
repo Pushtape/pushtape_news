@@ -1,8 +1,11 @@
 api = 2
 core = 7.x
 
-projects[defaultcontent] = 1.x-dev
-projects[uuid] = 1.x-dev
+projects[defaultcontent][version] = 1.x-dev
+projects[defaultcontent][subdir] = contrib
+
+projects[uuid][version] = 1.x-dev
+projects[uuid][subdir] = contrib
 
 projects[entityreference][version] = 1.0-rc3
 projects[entityreference][subdir] = contrib
