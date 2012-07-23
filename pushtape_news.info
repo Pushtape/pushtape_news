@@ -10,7 +10,6 @@ dependencies[] = features
 dependencies[] = image
 dependencies[] = page_manager
 dependencies[] = panelizer
-dependencies[] = pushtape_core
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
