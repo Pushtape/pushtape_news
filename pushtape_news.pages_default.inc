@@ -33,7 +33,7 @@ function pushtape_news_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'news',
+    'title' => 'News',
     'name' => 'main-menu',
     'weight' => '0',
     'parent' => array(
