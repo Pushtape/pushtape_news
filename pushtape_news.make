@@ -10,14 +10,13 @@ projects[uuid][subdir] = contrib
 projects[entityreference][version] = 1.0-rc3
 projects[entityreference][subdir] = contrib
 
-projects[ctools][version] = 1.1
+projects[ctools][version] = 1.2
 projects[ctools][subdir] = contrib
 projects[ctools][type] = module
 
 projects[features][version] = 1.0
 projects[features][subdir] = contrib
 projects[features][type] = module
-projects[features][patch][1647894] = http://drupal.org/files/features-1647894-1.patch
 
 projects[pathauto][version] = 1.2
 projects[pathauto][subdir] = contrib
