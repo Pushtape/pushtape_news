@@ -211,13 +211,10 @@ function pushtape_news_field_default_fields() {
     ),
   );
 
-  
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Image');
-  t('Tags');
 
   return $fields;
 }
