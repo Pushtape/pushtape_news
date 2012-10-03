@@ -23,6 +23,7 @@ features[field][] = node-pushtape_news-field_featured_image
 features[field][] = node-pushtape_news-field_tags
 features[node][] = pushtape_news
 features[page_manager_pages][] = pushtape_news
+features[panelizer_defaults][] = node:pushtape_news:default
 features[variable][] = additional_settings__active_tab_pushtape_news
 features[variable][] = date_popup_authored_enabled_pushtape_news
 features[variable][] = date_popup_authored_format_pushtape_news
