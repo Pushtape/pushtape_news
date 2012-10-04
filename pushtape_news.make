@@ -21,3 +21,6 @@ projects[strongarm][subdir] = contrib
 
 projects[views][type] = module
 projects[views][subdir] = contrib
+
+projects[views_slideshow][type] = module
+projects[views_slideshow][subdir] = contrib
