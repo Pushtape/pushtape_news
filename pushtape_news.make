@@ -24,3 +24,6 @@ projects[views][subdir] = contrib
 
 projects[views_slideshow][type] = module
 projects[views_slideshow][subdir] = contrib
+
+projects[jquery_update][type] = module
+projects[jquery_update][subdir] = contrib
