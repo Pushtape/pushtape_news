@@ -1,6 +1,8 @@
 api = 2
 core = 7.x
 
+projects[addthis][subdir] = contrib
+
 projects[defaultcontent][subdir] = contrib
 
 projects[uuid][subdir] = contrib
