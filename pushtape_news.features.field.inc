@@ -10,7 +10,7 @@
 function pushtape_news_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-pushtape_news-body'
+  // Exported field: 'node-pushtape_news-body'.
   $fields['node-pushtape_news-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function pushtape_news_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',

@@ -75,6 +75,7 @@ function pushtape_news_default_page_manager_pages() {
       'right' => NULL,
       'contentmain' => NULL,
       'header' => NULL,
+      'sidebar' => NULL,
     ),
     'sidebar' => array(
       'style' => '0',
@@ -119,13 +120,26 @@ function pushtape_news_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'follow-site';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'pushtape_news-news_slideshow';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'items_per_page' => '5',
+      'view_mode' => 'teaser',
+      'widget_title' => NULL,
+      'exposed' => array(
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'use_pager' => NULL,
+      'pager_id' => NULL,
+      'offset' => NULL,
+      'link_to_view' => NULL,
+      'more_link' => NULL,
+      'path' => NULL,
+      'view_settings' => 'fields',
+      'header_type' => 'none',
     );
     $pane->cache = array();
     $pane->style = array(
