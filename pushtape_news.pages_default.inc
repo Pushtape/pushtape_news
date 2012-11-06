@@ -73,12 +73,11 @@ function pushtape_news_default_page_manager_pages() {
       'default' => NULL,
       'left' => NULL,
       'right' => NULL,
-      'sidebar' => NULL,
       'contentmain' => NULL,
       'header' => NULL,
     ),
     'sidebar' => array(
-      'style' => 'background_callout',
+      'style' => '0',
     ),
   );
   $display->cache = array();
@@ -119,59 +118,26 @@ function pushtape_news_default_page_manager_pages() {
     $display->panels['contentmain'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = 'header';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'pushtape_news-featured_news';
+    $pane->panel = 'sidebar';
+    $pane->type = 'block';
+    $pane->subtype = 'follow-site';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'exposed' => array(
-        'title' => 'Tour begins next week',
-        'widget_title' => '',
-      ),
       'override_title' => 0,
       'override_title_text' => '',
-      'view_mode' => 'featured',
-      'widget_title' => '',
-      'items_per_page' => NULL,
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'default',
     );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['header'][0] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'sidebar';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'pushtape_news-news_listing';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '10',
-      'fields_override' => array(
-        'field_featured_image' => 0,
-        'title' => 1,
-        'created' => 0,
-        'body' => 0,
-        'field_tags' => 0,
-      ),
-      'view_mode' => NULL,
-      'widget_title' => 'Older',
-    );
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['sidebar'][0] = 'new-3';
+    $display->panels['sidebar'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
