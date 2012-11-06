@@ -1,6 +1,7 @@
 api = 2
 core = 7.x
 
+projects[addthis][type] = module
 projects[addthis][subdir] = contrib
 
 projects[defaultcontent][subdir] = contrib
