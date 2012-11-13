@@ -301,8 +301,9 @@ function pushtape_news_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 'fields_override';
 
-  /* Display: Slideshow of News Items */
-  $handler = $view->new_display('panel_pane', 'Slideshow of News Items', 'news_slideshow');
+  /* Display: Slideshow of Featured News */
+  $handler = $view->new_display('panel_pane', 'Slideshow of Featured News', 'news_slideshow');
+  $handler->display->display_options['display_description'] = 'a slideshow of news flagged as featured';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -351,6 +352,13 @@ function pushtape_news_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'pushtape_news' => 'pushtape_news',
+  );
+  /* Filter criterion: Field: Feature content (field_featured_status) */
+  $handler->display->display_options['filters']['field_featured_status_value']['id'] = 'field_featured_status_value';
+  $handler->display->display_options['filters']['field_featured_status_value']['table'] = 'field_data_field_featured_status';
+  $handler->display->display_options['filters']['field_featured_status_value']['field'] = 'field_featured_status_value';
+  $handler->display->display_options['filters']['field_featured_status_value']['value'] = array(
+    1 => '1',
   );
   $handler->display->display_options['pane_title'] = 'Slideshow of News Items';
   $handler->display->display_options['pane_category']['name'] = 'News';
