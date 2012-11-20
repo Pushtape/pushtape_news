@@ -12,7 +12,6 @@ dependencies[] = features
 dependencies[] = list
 dependencies[] = page_manager
 dependencies[] = panelizer
-dependencies[] = panopoly_core
 dependencies[] = pushtape_front
 dependencies[] = strongarm
 dependencies[] = text
