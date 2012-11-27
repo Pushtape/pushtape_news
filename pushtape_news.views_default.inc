@@ -353,7 +353,7 @@ function pushtape_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'pushtape_news' => 'pushtape_news',
   );
-  /* Filter criterion: Field: Feature content (field_featured_status) */
+  /* Filter criterion: Content: Feature content (field_featured_status) */
   $handler->display->display_options['filters']['field_featured_status_value']['id'] = 'field_featured_status_value';
   $handler->display->display_options['filters']['field_featured_status_value']['table'] = 'field_data_field_featured_status';
   $handler->display->display_options['filters']['field_featured_status_value']['field'] = 'field_featured_status_value';
