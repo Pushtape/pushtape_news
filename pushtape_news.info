@@ -42,3 +42,5 @@ features[variable][] = node_submitted_pushtape_news
 features[variable][] = panelizer_defaults_node_pushtape_news
 features[variable][] = pathauto_node_pushtape_news_pattern
 features[views_view][] = pushtape_news
+project status url = project status url = http://updates.drupal.org/release-history/pushtape_news/7.x
+apps[server] = http://apps.pushtape.openlearninglabs.org/app/query/pushtape
