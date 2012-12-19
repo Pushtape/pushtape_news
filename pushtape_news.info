@@ -12,7 +12,6 @@ dependencies[] = features
 dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = panelizer
-;dependencies[] = pushtape_front
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_slideshow
