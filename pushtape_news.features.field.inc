@@ -10,8 +10,8 @@
 function pushtape_news_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-pushtape_news-body'.
-  $fields['node-pushtape_news-body'] = array(
+  // Exported field: 'node-news-body'.
+  $fields['node-news-body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -36,11 +36,11 @@ function pushtape_news_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(),
-      'translatable' => '0',
+      'translatable' => '1',
       'type' => 'text_with_summary',
     ),
     'field_instance' => array(
-      'bundle' => 'pushtape_news',
+      'bundle' => 'news',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -53,21 +53,6 @@ function pushtape_news_field_default_fields() {
           'weight' => '1',
         ),
         'featured' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(
-            'trim_length' => '400',
-          ),
-          'type' => 'text_trimmed',
-          'weight' => '1',
-        ),
-        'grid' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'mediaplaylist' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -80,7 +65,7 @@ function pushtape_news_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => '1',
+          'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
@@ -88,7 +73,7 @@ function pushtape_news_field_default_fields() {
       'label' => 'Body',
       'required' => 0,
       'settings' => array(
-        'display_summary' => 0,
+        'display_summary' => 1,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
@@ -96,7 +81,7 @@ function pushtape_news_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => '30',
+          'rows' => '20',
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
@@ -105,8 +90,8 @@ function pushtape_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-pushtape_news-field_addthis'.
-  $fields['node-pushtape_news-field_addthis'] = array(
+  // Exported field: 'node-news-field_addthis'.
+  $fields['node-news-field_addthis'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -124,7 +109,7 @@ function pushtape_news_field_default_fields() {
       'type' => 'addthis',
     ),
     'field_instance' => array(
-      'bundle' => 'pushtape_news',
+      'bundle' => 'news',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
@@ -137,12 +122,6 @@ function pushtape_news_field_default_fields() {
           'weight' => '2',
         ),
         'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '3',
-        ),
-        'mediaplaylist' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
@@ -160,6 +139,13 @@ function pushtape_news_field_default_fields() {
       'label' => 'AddThis',
       'required' => FALSE,
       'settings' => array(
+        'mediafront' => array(
+          'custom' => '',
+          'field_type' => '0',
+          'media_type' => 'media',
+          'preview' => '0',
+          'thumbnail' => '0',
+        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -167,13 +153,13 @@ function pushtape_news_field_default_fields() {
         'module' => 'addthis',
         'settings' => array(),
         'type' => 'addthis_button_widget',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
 
-  // Exported field: 'node-pushtape_news-field_featured_image'.
-  $fields['node-pushtape_news-field_featured_image'] = array(
+  // Exported field: 'node-news-field_featured_image'.
+  $fields['node-news-field_featured_image'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -203,7 +189,7 @@ function pushtape_news_field_default_fields() {
       'type' => 'image',
     ),
     'field_instance' => array(
-      'bundle' => 'pushtape_news',
+      'bundle' => 'news',
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -218,14 +204,10 @@ function pushtape_news_field_default_fields() {
           'weight' => '0',
         ),
         'featured' => array(
-          'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => 'content',
-            'image_style' => 'panopoly_image_half',
-          ),
-          'type' => 'image',
-          'weight' => '0',
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -241,11 +223,18 @@ function pushtape_news_field_default_fields() {
       'settings' => array(
         'alt_field' => 0,
         'default_image' => 0,
-        'file_directory' => '',
+        'file_directory' => 'images',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '300x200',
+        'mediafront' => array(
+          'custom' => '',
+          'field_type' => '0',
+          'media_type' => 'media',
+          'preview' => '0',
+          'thumbnail' => '0',
+        ),
+        'min_resolution' => '',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -280,8 +269,8 @@ function pushtape_news_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-pushtape_news-field_featured_status'.
-  $fields['node-pushtape_news-field_featured_status'] = array(
+  // Exported field: 'node-news-field_featured_status'.
+  $fields['node-news-field_featured_status'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
@@ -307,7 +296,7 @@ function pushtape_news_field_default_fields() {
       'type' => 'list_boolean',
     ),
     'field_instance' => array(
-      'bundle' => 'pushtape_news',
+      'bundle' => 'news',
       'default_value' => array(
         0 => array(
           'value' => 0,
@@ -327,12 +316,6 @@ function pushtape_news_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
-        ),
-        'mediaplaylist' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
           'weight' => 0,
         ),
         'teaser' => array(
@@ -347,6 +330,13 @@ function pushtape_news_field_default_fields() {
       'label' => 'Feature content',
       'required' => 0,
       'settings' => array(
+        'mediafront' => array(
+          'custom' => '',
+          'field_type' => '0',
+          'media_type' => 'media',
+          'preview' => '0',
+          'thumbnail' => '0',
+        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -356,7 +346,7 @@ function pushtape_news_field_default_fields() {
           'display_label' => 1,
         ),
         'type' => 'options_onoff',
-        'weight' => '5',
+        'weight' => '3',
       ),
     ),
   );

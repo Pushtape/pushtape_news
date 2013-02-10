@@ -9,14 +9,6 @@
  */
 function pushtape_news_ctools_plugin_api() {
   list($module, $api) = func_get_args();
-  if ($module == "page_manager" && $api == "pages_default") {
-    return array("version" => "1");
-  }
-  list($module, $api) = func_get_args();
-  if ($module == "panelizer" && $api == "panelizer") {
-    return array("version" => "1");
-  }
-  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -34,10 +26,10 @@ function pushtape_news_views_api() {
  */
 function pushtape_news_node_info() {
   $items = array(
-    'pushtape_news' => array(
+    'news' => array(
       'name' => t('News'),
       'base' => 'node_content',
-      'description' => t('An important piece of news to post to your site. '),
+      'description' => t('A quick news update.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
