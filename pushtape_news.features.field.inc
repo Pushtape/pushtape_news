@@ -53,10 +53,13 @@ function pushtape_news_field_default_fields() {
           'weight' => '1',
         ),
         'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'trim_length' => 600,
+          ),
+          'type' => 'text_trimmed',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -65,7 +68,7 @@ function pushtape_news_field_default_fields() {
             'trim_length' => 600,
           ),
           'type' => 'text_summary_or_trimmed',
-          'weight' => 0,
+          'weight' => '1',
         ),
       ),
       'entity_type' => 'node',
@@ -86,74 +89,6 @@ function pushtape_news_field_default_fields() {
         ),
         'type' => 'text_textarea_with_summary',
         'weight' => '2',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-news-field_addthis'.
-  $fields['node-news-field_addthis'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_addthis',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'addthis',
-      'settings' => array(
-        'max_length' => 255,
-      ),
-      'translatable' => '0',
-      'type' => 'addthis',
-    ),
-    'field_instance' => array(
-      'bundle' => 'news',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'addthis',
-          'settings' => array(),
-          'type' => 'addthis_disabled',
-          'weight' => '2',
-        ),
-        'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_addthis',
-      'label' => 'AddThis',
-      'required' => FALSE,
-      'settings' => array(
-        'mediafront' => array(
-          'custom' => '',
-          'field_type' => '0',
-          'media_type' => 'media',
-          'preview' => '0',
-          'thumbnail' => '0',
-        ),
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'addthis',
-        'settings' => array(),
-        'type' => 'addthis_button_widget',
-        'weight' => '4',
       ),
     ),
   );
@@ -194,7 +129,7 @@ function pushtape_news_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
@@ -204,16 +139,24 @@ function pushtape_news_field_default_fields() {
           'weight' => '0',
         ),
         'featured' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => 'panopoly_image_featured',
+          ),
+          'type' => 'image',
+          'weight' => '0',
         ),
         'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => 'panopoly_image_quarter',
+          ),
+          'type' => 'image',
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -223,18 +166,11 @@ function pushtape_news_field_default_fields() {
       'settings' => array(
         'alt_field' => 0,
         'default_image' => 0,
-        'file_directory' => 'images',
+        'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'mediafront' => array(
-          'custom' => '',
-          'field_type' => '0',
-          'media_type' => 'media',
-          'preview' => '0',
-          'thumbnail' => '0',
-        ),
-        'min_resolution' => '',
+        'min_resolution' => '300x200',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -245,7 +181,6 @@ function pushtape_news_field_default_fields() {
           'allowed_schemes' => array(
             'private' => 'private',
             'public' => 'public',
-            'soundcloud' => 0,
             'vimeo' => 0,
             'youtube' => 0,
           ),
@@ -307,22 +242,21 @@ function pushtape_news_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => '3',
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'featured' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'node',
@@ -330,13 +264,6 @@ function pushtape_news_field_default_fields() {
       'label' => 'Feature content',
       'required' => 0,
       'settings' => array(
-        'mediafront' => array(
-          'custom' => '',
-          'field_type' => '0',
-          'media_type' => 'media',
-          'preview' => '0',
-          'thumbnail' => '0',
-        ),
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -346,14 +273,13 @@ function pushtape_news_field_default_fields() {
           'display_label' => 1,
         ),
         'type' => 'options_onoff',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('AddThis');
   t('Body');
   t('Feature content');
   t('Primary Image');

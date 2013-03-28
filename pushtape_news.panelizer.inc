@@ -13,14 +13,14 @@ function pushtape_news_panelizer_defaults() {
   $panelizer = new stdClass();
   $panelizer->disabled = FALSE; /* Edit this to true to make a default panelizer disabled initially */
   $panelizer->api_version = 1;
-  $panelizer->name = 'node:pushtape_news:default';
+  $panelizer->name = 'node:news:default';
   $panelizer->title = 'Default';
   $panelizer->panelizer_type = 'node';
-  $panelizer->panelizer_key = 'pushtape_news';
+  $panelizer->panelizer_key = 'news';
   $panelizer->no_blocks = FALSE;
-  $panelizer->css_id = 'news-page';
+  $panelizer->css_id = '';
   $panelizer->css = '';
-  $panelizer->pipeline = 'ipe';
+  $panelizer->pipeline = 'standard';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
   $panelizer->access = array();
@@ -28,14 +28,13 @@ function pushtape_news_panelizer_defaults() {
   $panelizer->css_class = '';
   $panelizer->title_element = 'H2';
   $panelizer->link_to_entity = TRUE;
-  $panelizer->extra = '';
+  $panelizer->extra = array();
   $display = new panels_display();
   $display->layout = 'burr_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'center' => NULL,
       'sidebar' => NULL,
       'contentmain' => NULL,
     ),
@@ -59,24 +58,9 @@ function pushtape_news_panelizer_defaults() {
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
         'image_style' => 'panopoly_image_half',
-        'image_link' => 'content',
+        'image_link' => '',
       ),
-      'context' => array(),
-      'override_title' => 0,
-      'override_title_text' => '',
-      'view_mode' => NULL,
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
+      'context' => 'panelizer',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -91,14 +75,18 @@ function pushtape_news_panelizer_defaults() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'contentmain';
-    $pane->type = 'node_body';
-    $pane->subtype = 'node_body';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:body';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
       'context' => 'panelizer',
-      'override_title' => 1,
-      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -112,68 +100,15 @@ function pushtape_news_panelizer_defaults() {
     $display->panels['contentmain'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'contentmain';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_addthis';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'addthis_basic_toolbox',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'share_services' => 'facebook,twitter',
-        'buttons_size' => 'addthis_16x16_style',
-        'counter_orientation' => 'horizontal',
-        'extra_css' => '',
-      ),
-      'context' => array(),
-      'override_title' => 0,
-      'override_title_text' => '',
-      'view_mode' => NULL,
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
-      ),
-      'use_pager' => NULL,
-      'pager_id' => NULL,
-      'offset' => NULL,
-      'link_to_view' => NULL,
-      'more_link' => NULL,
-      'path' => NULL,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][2] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
-    $pane->subtype = 'pushtape_news-news_listing';
+    $pane->subtype = 'news-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'items_per_page' => '3',
-      'fields_override' => array(
-        'field_featured_image' => 1,
-        'title' => 1,
-        'created' => 0,
-        'body' => 0,
-        'field_tags' => 0,
-      ),
       'view_mode' => 'teaser',
       'widget_title' => NULL,
+      'items_per_page' => NULL,
       'exposed' => array(
         'sort_by' => NULL,
         'sort_order' => NULL,
@@ -195,12 +130,12 @@ function pushtape_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][0] = 'new-4';
+    $display->content['new-3'] = $pane;
+    $display->panels['sidebar'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
+  $display->title_pane = 'new-1';
   $panelizer->display = $display;
-  $export['node:pushtape_news:default'] = $panelizer;
+  $export['node:news:default'] = $panelizer;
 
   return $export;
 }
