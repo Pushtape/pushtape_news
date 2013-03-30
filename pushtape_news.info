@@ -27,3 +27,11 @@ features[page_manager_pages][] = news
 features[panelizer_defaults][] = node:news:default
 features[variable][] = field_bundle_settings_node__news
 features[views_view][] = news
+
+
+; Information added by drush on 2013-03-28
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_news"
+datestamp = "1364538864"
+
