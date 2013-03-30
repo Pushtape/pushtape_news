@@ -12,6 +12,7 @@ dependencies[] = media
 dependencies[] = menu
 dependencies[] = panelizer
 dependencies[] = strongarm
+dependencies[] = views
 dependencies[] = views_content
 datestamp = 1363937125
 features[ctools][] = page_manager:pages_default:1
@@ -26,6 +27,7 @@ features[node][] = news
 features[page_manager_pages][] = news
 features[panelizer_defaults][] = node:news:default
 features[variable][] = field_bundle_settings_node__news
+features[variable][] = panelizer_defaults_node_news
 features[views_view][] = news
 
 
