@@ -5,13 +5,18 @@ package = Pushtape
 php = 5.2.4
 version = 7.x-1.0-alpha3
 project = pushtape_news
+dependencies[] = ctools
 dependencies[] = features
 dependencies[] = flexslider_views
+dependencies[] = image
 dependencies[] = list
 dependencies[] = media
 dependencies[] = menu
+dependencies[] = options
+dependencies[] = page_manager
 dependencies[] = panelizer
 dependencies[] = strongarm
+dependencies[] = text
 dependencies[] = views
 dependencies[] = views_content
 datestamp = 1363937125
@@ -28,6 +33,7 @@ features[page_manager_pages][] = news
 features[panelizer_defaults][] = node:news:default
 features[variable][] = field_bundle_settings_node__news
 features[variable][] = panelizer_defaults_node_news
+features[variable][] = pathauto_node_news_pattern
 features[views_view][] = news
 
 
