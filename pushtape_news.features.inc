@@ -34,10 +34,10 @@ function pushtape_news_views_api() {
  */
 function pushtape_news_node_info() {
   $items = array(
-    'pushtape_news' => array(
+    'news' => array(
       'name' => t('News'),
       'base' => 'node_content',
-      'description' => t('An important piece of news to post to your site. '),
+      'description' => t('A quick news update.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
