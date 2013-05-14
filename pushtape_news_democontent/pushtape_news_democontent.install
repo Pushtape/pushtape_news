@@ -32,7 +32,7 @@ function pushtape_news_democontent_init() {
       taxonomy_term_save($term);
 
       // Randomly assign it to a few nodes
-      foreach(db_query('SELECT n.nid FROM {node} n WHERE n.type = :type ORDER BY RAND() LIMIT 4', array(':type' => 'pushtape_news')) as $node) {
+      foreach(db_query('SELECT n.nid FROM {node} n WHERE n.type = :type ORDER BY RAND() LIMIT 4', array(':type' => 'news')) as $node) {
         $node = node_load($node->nid, NULL, TRUE);
         $node->field_tags['und'][] = array('tid' => $term->tid);
         node_save($node);
