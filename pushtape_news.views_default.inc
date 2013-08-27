@@ -23,6 +23,7 @@ function pushtape_news_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'News';
+  $handler->display->display_options['css_class'] = 'widgets';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -86,8 +87,8 @@ function pushtape_news_views_default_views() {
   $handler->display->display_options['pane_category']['name'] = 'News';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
-  /* Display: Sidebar of News Items */
-  $handler = $view->new_display('panel_pane', 'Sidebar of News Items', 'panel_pane_2');
+  /* Display: Recent News */
+  $handler = $view->new_display('panel_pane', 'Recent News', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Recent News';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -147,9 +148,10 @@ function pushtape_news_views_default_views() {
   $handler->display->display_options['pane_category']['name'] = 'News';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
-  /* Display: Slideshow of Featured News */
-  $handler = $view->new_display('panel_pane', 'Slideshow of Featured News', 'panel_pane_3');
+  /* Display: Featured News (Slideshow) */
+  $handler = $view->new_display('panel_pane', 'Featured News (Slideshow)', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Latest News';
   $handler->display->display_options['display_description'] = 'a slideshow of news flagged as featured';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
