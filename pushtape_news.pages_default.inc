@@ -222,21 +222,14 @@ function pushtape_news_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-5'] = $pane;
     $display->panels['sidebar'][2] = 'new-5';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $pages['news'] = $page;
+
+    $display->hide_title = PANELS_TITLE_FIXED;
+    $display->title_pane = '0';
+    $handler->conf['display'] = $display;
+    $page->default_handlers[$handler->name] = $handler;
+    $pages['news'] = $page;
 
   return $pages;
 
 }
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
-  $handler->conf['display'] = $display;
-  $page->default_handlers[$handler->name] = $handler;
-  $pages['news'] = $page;
 
-  return $pages;
-
-}

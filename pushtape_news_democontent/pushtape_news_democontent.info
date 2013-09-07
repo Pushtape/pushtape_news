@@ -33,3 +33,11 @@ core = "7.x"
 project = "pushtape_news"
 datestamp = "1376349382"
 
+
+
+; Information added by drush on 2013-09-06
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_news"
+datestamp = "1378512684"
+
