@@ -70,20 +70,26 @@ function pushtape_news_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
+      'widget_title' => 'Latest News',
+      'items_per_page' => '3',
       'exposed' => array(
+        'widget_title' => 'Latest News',
+        'more_link' => 1,
+        'use_pager' => 1,
+        'pager_id' => '',
         'sort_by' => NULL,
         'sort_order' => NULL,
       ),
       'use_pager' => NULL,
       'pager_id' => NULL,
-      'offset' => NULL,
+      'offset' => '2',
       'link_to_view' => NULL,
-      'more_link' => NULL,
+      'more_link' => 1,
       'path' => NULL,
-      'view_settings' => 'fields',
+      'view_settings' => 'nodes',
       'header_type' => 'none',
+      'override_title' => '',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -104,9 +110,10 @@ function pushtape_news_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'view_mode' => 'teaser',
-      'widget_title' => NULL,
-      'items_per_page' => NULL,
+      'widget_title' => '',
+      'items_per_page' => '0',
       'exposed' => array(
+        'widget_title' => '',
         'sort_by' => NULL,
         'sort_order' => NULL,
       ),
@@ -118,6 +125,13 @@ function pushtape_news_default_page_manager_pages() {
       'path' => NULL,
       'view_settings' => 'fields',
       'header_type' => 'none',
+      'fields_override' => array(
+        'field_featured_image' => 1,
+        'title' => 1,
+        'body' => 1,
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array();
@@ -136,11 +150,12 @@ function pushtape_news_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'view_mode' => 'teaser',
-      'widget_title' => NULL,
+      'widget_title' => 'Latest Release',
       'items_per_page' => NULL,
       'exposed' => array(
-        'sort_by' => NULL,
-        'sort_order' => NULL,
+        'widget_title' => 'Latest Release',
+        'sort_by' => 'field_release_date_value',
+        'sort_order' => 'DESC',
       ),
       'use_pager' => NULL,
       'pager_id' => NULL,
@@ -150,6 +165,12 @@ function pushtape_news_default_page_manager_pages() {
       'path' => NULL,
       'view_settings' => 'fields',
       'header_type' => 'none',
+      'fields_override' => array(
+        'field_artwork' => 1,
+        'title' => 1,
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array();
@@ -185,10 +206,12 @@ function pushtape_news_default_page_manager_pages() {
       'pager_id' => NULL,
       'offset' => NULL,
       'link_to_view' => NULL,
-      'more_link' => NULL,
+      'more_link' => 1,
       'path' => NULL,
       'view_settings' => 'fields',
       'header_type' => 'none',
+      'override_title' => '',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array();
@@ -232,4 +255,3 @@ function pushtape_news_default_page_manager_pages() {
   return $pages;
 
 }
-
