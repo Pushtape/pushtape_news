@@ -2,11 +2,20 @@ name = Pushtape News
 description = Creates a news content type and associated views.
 core = 7.x
 package = Pushtape
-php = 5.2.4
 version = 7.x-1.0-alpha3
 project = pushtape_news
+dependencies[] = ctools
+dependencies[] = features
 dependencies[] = flexslider_views
+dependencies[] = image
 dependencies[] = media
+dependencies[] = options
+dependencies[] = page_manager
+dependencies[] = panelizer
+dependencies[] = strongarm
+dependencies[] = text
+dependencies[] = views
+dependencies[] = views_content
 dependencies[] = views_slideshow_cycle
   = ======
 <<<<<<< HEAD
@@ -26,7 +35,7 @@ project = pushtape_news
 ape_news-field_featured_status
 features[node][] = pushtape_news
 apps[server] = http://apps.pushtape.openlearninglabs.org/app/query/pushtape
-datestamp = 1378933301
+datestamp = 1379362194
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
@@ -50,6 +59,12 @@ features[variable][] = pathauto_node_news_pattern
 features[views_view][] = news
 features_exclude[dependencies][pushtape_discography] = pushtape_discography
 features_exclude[dependencies][pushtape_newsletter] = pushtape_newsletter
-features_exclude[dependencies][views_content] = views_content
-features_exclude[dependencies][views] = views
 project status url = project status url = http://updates.drupal.org/release-history/pushtape_news/7.x
+
+
+; Information added by drush on 2013-09-16
+version = "7.x-1.0-alpha3"
+core = "7.x"
+project = "pushtape_news"
+datestamp = "1379362194"
+

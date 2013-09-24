@@ -168,6 +168,10 @@ function pushtape_news_default_page_manager_pages() {
       'fields_override' => array(
         'field_artwork' => 1,
         'title' => 1,
+        'field_album' => 0,
+        'field_artist' => 0,
+        'field_audio' => 1,
+        'field_purchase' => 1,
       ),
       'override_title' => '',
       'override_title_text' => '',
@@ -245,12 +249,11 @@ function pushtape_news_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-5'] = $pane;
     $display->panels['sidebar'][2] = 'new-5';
-
-    $display->hide_title = PANELS_TITLE_FIXED;
-    $display->title_pane = '0';
-    $handler->conf['display'] = $display;
-    $page->default_handlers[$handler->name] = $handler;
-    $pages['news'] = $page;
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['news'] = $page;
 
   return $pages;
 
