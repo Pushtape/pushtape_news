@@ -145,36 +145,33 @@ function pushtape_news_default_page_manager_pages() {
     $pane->pid = 'new-3';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
-    $pane->subtype = 'releases-panel_pane_2';
+    $pane->subtype = 'albums-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'teaser',
-      'widget_title' => 'Latest Release',
-      'items_per_page' => NULL,
-      'exposed' => array(
-        'widget_title' => 'Latest Release',
-        'sort_by' => 'field_release_date_value',
-        'sort_order' => 'DESC',
+      'fields_override' => array(
+        'field_artwork' => 1,
+        'title' => 1,
+        'field_artist' => 0,
+        'field_album' => 1,
+        'field_tracklist' => 1,
       ),
+      'exposed' => array(
+        'widget_title' => 'Featured Album',
+        'sort_by' => NULL,
+        'sort_order' => NULL,
+      ),
+      'override_title' => '',
+      'override_title_text' => '',
+      'view_mode' => 'teaser',
+      'widget_title' => 'Featured Album',
+      'items_per_page' => NULL,
       'use_pager' => NULL,
       'pager_id' => NULL,
       'offset' => NULL,
       'link_to_view' => NULL,
       'more_link' => NULL,
       'path' => NULL,
-      'view_settings' => 'fields',
-      'header_type' => 'none',
-      'fields_override' => array(
-        'field_artwork' => 1,
-        'title' => 1,
-        'field_album' => 0,
-        'field_artist' => 0,
-        'field_audio' => 1,
-        'field_purchase' => 1,
-      ),
-      'override_title' => '',
-      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array();
@@ -225,30 +222,6 @@ function pushtape_news_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['sidebar'][1] = 'new-4';
-    $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'simplenews-1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => 'newsletter',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar'][2] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
