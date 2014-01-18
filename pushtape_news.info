@@ -2,7 +2,7 @@ name = Pushtape News
 description = Creates a news content type and associated views.
 core = 7.x
 package = Pushtape
-version = 7.x-1.0-dev
+version = 7.x-1.0-panels
 project = pushtape_news
 dependencies[] = ctools
 dependencies[] = features
@@ -18,33 +18,11 @@ dependencies[] = text
 dependencies[] = views
 dependencies[] = views_content
 dependencies[] = views_slideshow_cycle
-  = ======
-<<<<<<< HEAD
-dependencies[] = flexslider_views
-<<<<<<< HEAD
-dependencies[] = views_content
-<<<<<<< HEAD
-features[field][] = node-news-body
-<<<<<<< HEAD
-version = 7.x-1.0-alpha3
->>>>>>> c759c856b78b4546a7f196b564b2f4a756b99626
-dependencies[] = options
->>>>>>> c759c856b78b4546a7f196b564b2f4a756b99626
-features[ctools][] = page_manager:pages_default:1
->>>>>>> c759c856b78b4546a7f196b564b2f4a756b99626
-project = pushtape_news
-ape_news-field_featured_status
-features[node][] = pushtape_news
-apps[server] = http://apps.pushtape.openlearninglabs.org/app/query/pushtape
-datestamp = 1384243642
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = panelizer:panelizer:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
-features[field_base][] = body
-features[field_base][] = field_featured_image
-features[field_base][] = field_featured_status
 features[field_instance][] = node-news-body
 features[field_instance][] = node-news-field_featured_image
 features[field_instance][] = node-news-field_featured_status
@@ -62,4 +40,5 @@ features[variable][] = pathauto_node_news_pattern
 features[views_view][] = news
 features_exclude[dependencies][pushtape_discography] = pushtape_discography
 features_exclude[dependencies][pushtape_newsletter] = pushtape_newsletter
-project status url = project status url = http://updates.drupal.org/release-history/pushtape_news/7.x
+features_exclude[field][node-news-field_featured_image] = node-news-field_featured_image
+features_exclude[field][node-news-field_featured_status] = node-news-field_featured_status
