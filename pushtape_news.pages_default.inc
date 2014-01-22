@@ -41,7 +41,7 @@ function pushtape_news_default_page_manager_pages() {
     'pipeline' => 'ipe',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
-    'css_id' => '',
+    'css_id' => 'news',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
