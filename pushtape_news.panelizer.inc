@@ -20,7 +20,7 @@ function pushtape_news_panelizer_defaults() {
   $panelizer->no_blocks = FALSE;
   $panelizer->css_id = 'news';
   $panelizer->css = '';
-  $panelizer->pipeline = 'standard';
+  $panelizer->pipeline = 'ipe';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
   $panelizer->access = array();
@@ -205,7 +205,7 @@ function pushtape_news_panelizer_defaults() {
     $display->content['new-5'] = $pane;
     $display->panels['sidebar'][1] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:news:default'] = $panelizer;
 
