@@ -21,7 +21,6 @@ function pushtape_news_defaultconfig_features() {
 function pushtape_news_defaultconfig_user_default_permissions() {
   $permissions = array();
 
-
   // Exported permission: 'create news content'.
   $permissions['create news content'] = array(
     'name' => 'create news content',
