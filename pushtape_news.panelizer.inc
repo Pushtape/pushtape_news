@@ -18,9 +18,9 @@ function pushtape_news_panelizer_defaults() {
   $panelizer->panelizer_type = 'node';
   $panelizer->panelizer_key = 'news';
   $panelizer->no_blocks = FALSE;
-  $panelizer->css_id = '';
+  $panelizer->css_id = 'news';
   $panelizer->css = '';
-  $panelizer->pipeline = 'standard';
+  $panelizer->pipeline = 'ipe';
   $panelizer->contexts = array();
   $panelizer->relationships = array();
   $panelizer->access = array();
@@ -30,7 +30,7 @@ function pushtape_news_panelizer_defaults() {
   $panelizer->link_to_entity = TRUE;
   $panelizer->extra = array();
   $display = new panels_display();
-  $display->layout = 'burr_flipped';
+  $display->layout = 'floyd_flipped';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -41,10 +41,11 @@ function pushtape_news_panelizer_defaults() {
   );
   $display->cache = array();
   $display->title = '%node:title';
+  $display->uuid = '2cfbd48e-2882-48f4-92e0-860b1110b49a';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-af0ac5f7-d199-45ad-acfe-4b27d4bd00bd';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_featured_image';
@@ -70,10 +71,11 @@ function pushtape_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['contentmain'][0] = 'new-1';
+    $pane->uuid = 'af0ac5f7-d199-45ad-acfe-4b27d4bd00bd';
+    $display->content['new-af0ac5f7-d199-45ad-acfe-4b27d4bd00bd'] = $pane;
+    $display->panels['contentmain'][0] = 'new-af0ac5f7-d199-45ad-acfe-4b27d4bd00bd';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-a902ad9d-e801-4b1e-a90d-bafd786f5c8e';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:body';
@@ -96,10 +98,11 @@ function pushtape_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['contentmain'][1] = 'new-2';
+    $pane->uuid = 'a902ad9d-e801-4b1e-a90d-bafd786f5c8e';
+    $display->content['new-a902ad9d-e801-4b1e-a90d-bafd786f5c8e'] = $pane;
+    $display->panels['contentmain'][1] = 'new-a902ad9d-e801-4b1e-a90d-bafd786f5c8e';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4423b24d-d096-4f70-b665-f9a764b43e89';
     $pane->panel = 'contentmain';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -121,10 +124,11 @@ function pushtape_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['contentmain'][2] = 'new-3';
+    $pane->uuid = '4423b24d-d096-4f70-b665-f9a764b43e89';
+    $display->content['new-4423b24d-d096-4f70-b665-f9a764b43e89'] = $pane;
+    $display->panels['contentmain'][2] = 'new-4423b24d-d096-4f70-b665-f9a764b43e89';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-d645dfab-105f-4efa-b320-033c9e9b077a';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
     $pane->subtype = 'news-panel_pane_2';
@@ -158,10 +162,11 @@ function pushtape_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['sidebar'][0] = 'new-4';
+    $pane->uuid = 'd645dfab-105f-4efa-b320-033c9e9b077a';
+    $display->content['new-d645dfab-105f-4efa-b320-033c9e9b077a'] = $pane;
+    $display->panels['sidebar'][0] = 'new-d645dfab-105f-4efa-b320-033c9e9b077a';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-a67ba933-6d30-4716-ac02-6d32fca30cde';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';
     $pane->subtype = 'events-panel_pane_3';
@@ -202,34 +207,11 @@ function pushtape_news_panelizer_defaults() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['sidebar'][1] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'sidebar';
-    $pane->type = 'block';
-    $pane->subtype = 'simplenews-1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => 'newsletter',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['sidebar'][2] = 'new-6';
+    $pane->uuid = 'a67ba933-6d30-4716-ac02-6d32fca30cde';
+    $display->content['new-a67ba933-6d30-4716-ac02-6d32fca30cde'] = $pane;
+    $display->panels['sidebar'][1] = 'new-a67ba933-6d30-4716-ac02-6d32fca30cde';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:news:default'] = $panelizer;
 

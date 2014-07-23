@@ -25,3 +25,15 @@ datestamp = "1364538864"
 
 =======
 >>>>>>> c759c856b78b4546a7f196b564b2f4a756b99626:pushtape_news_democontent.info
+
+
+
+
+
+
+; Information added by drush on 2013-11-12
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "pushtape_news"
+datestamp = "1384243642"
+
