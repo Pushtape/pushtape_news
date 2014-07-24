@@ -29,11 +29,8 @@ datestamp = "1364538864"
 
 
 
-
-
-; Information added by drush on 2013-11-12
+; Information added by drush on 2014-07-22
 version = "7.x-1.x-panels-dev"
 core = "7.x"
 project = "pushtape_news"
-datestamp = "1384243642"
-
+datestamp = "1406085705"
