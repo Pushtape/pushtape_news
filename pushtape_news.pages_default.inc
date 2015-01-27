@@ -137,7 +137,16 @@ function pushtape_news_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_style' => array(
+          'well' => 'well',
+          'pull-left' => 0,
+          'pull-right' => 0,
+          'clearfix' => 0,
+          'jumbotron' => 0,
+        ),
+      ),
+      'style' => 'bootstrapcustomize',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -180,7 +189,16 @@ function pushtape_news_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_style' => array(
+          'well' => 'well',
+          'pull-left' => 0,
+          'pull-right' => 0,
+          'clearfix' => 0,
+          'jumbotron' => 0,
+        ),
+      ),
+      'style' => 'bootstrapcustomize',
     );
     $pane->css = array();
     $pane->extras = array();
@@ -224,7 +242,16 @@ function pushtape_news_default_page_manager_pages() {
     );
     $pane->cache = array();
     $pane->style = array(
-      'settings' => NULL,
+      'settings' => array(
+        'pane_style' => array(
+          'well' => 'well',
+          'pull-left' => 0,
+          'pull-right' => 0,
+          'clearfix' => 0,
+          'jumbotron' => 0,
+        ),
+      ),
+      'style' => 'bootstrapcustomize',
     );
     $pane->css = array();
     $pane->extras = array();
