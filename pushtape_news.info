@@ -55,4 +55,3 @@ features_exclude[dependencies][pushtape_photos] = pushtape_photos
 features_exclude[dependencies][panopoly_pages] = panopoly_pages
 features_exclude[field][node-news-field_featured_image] = node-news-field_featured_image
 features_exclude[field][node-news-field_featured_status] = node-news-field_featured_status
-mtime = 1423002250
